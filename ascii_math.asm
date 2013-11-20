@@ -1,5 +1,6 @@
 ;; ...
 
+
 ;ascii     35h 33h
 ;bcd       05h 03h
 ;bcd           53h
@@ -10,6 +11,15 @@
 aaa : ascii + ascii -> bcd
       '5'   + '3' ->  08h
                       38h -> '8'
+                      
+mov al, '5'
+add al, '3'
+aaa
+; al -> 08h
+
+; convert al to ascii
+or al, 30h
+
                       
 aas : ascii - ascii -> bcd
 aam : ascii * ascii -> bcd
