@@ -1,0 +1,28 @@
+FLag:
+    N   negative flag
+    Z   zero flag
+    C   carry flag
+    V   overflow flag
+    IRQ interrupt disable flag
+    FIQ fast interrupt disable flag
+    S1  process mod1
+    s0  process mod0
+
+Cond
+    al always
+    nv never
+    eq equal
+    ne notequal
+    vs overflow
+    vc not overflow
+    mi minus, negivate, N=1
+    pl plus, not negivate, N=0
+    cs carry set, C = 1
+    cc carry clear, C = 0
+    hi higher, C = 1, N = 0
+    ls less, C = 1, N = 1
+    ge greate or equal,    N=0 and V=0 | N=1 and V=1
+    lt less than,          N=1 and V=0 | N=0 and V=1
+
+
+op{cond} dest, lhs, rhs
